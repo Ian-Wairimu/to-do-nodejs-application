@@ -1,0 +1,35 @@
+<!--<%-include("header")-%>-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do list</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="box" id="heading">
+    <h1 style="color: blueviolet">It's a <%=listTitle%></h1>
+</div>
+<div class="box">
+        <%for(let i = 0; i < listItems.length; i++){ %>
+    <div class="item">
+        <input type="checkbox">
+        <p><%=listItems[i]%></p>
+    </div>
+        <%}%>
+    <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="list" value=<%=listTitle%>>+</button>
+    </form>
+</div>
+
+<footer>© copyright Wairimu Ian 2022</footer>
+</body>
+</html>
+
+<!--<%-include("footer")-%>-->
+
+
