@@ -1,0 +1,7 @@
+# specify a base image
+FROM x
+alpine
+# install dependencies using the npm install
+RUN npm install
+# default command when starting our server
+CMD ["npm", "start"]
